@@ -21,4 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 
-Route::resource("termek", TermekController::class);
+Route::resource("termek", TermekController::class)->except("create", "edit");

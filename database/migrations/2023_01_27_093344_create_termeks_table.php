@@ -17,6 +17,7 @@ class CreateTermeksTable extends Migration
             $table->id();
             $table->string('nev', 100);
             $table->string('kepurl');
+            $table->string('leiras');
             $table->integer('ar');
             $table->double('kedvezmeny');
             $table->timestamps();
