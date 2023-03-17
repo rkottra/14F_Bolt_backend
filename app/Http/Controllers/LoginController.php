@@ -70,4 +70,8 @@ class LoginController extends Controller
     public function VedettAdatok() {
         return ["Ezek szigorúan titkos adatok"];
     }
+    
+    public function logout(Request $request) {
+        $request->user()->currentAccessToken()->delete();
+    }
 }
