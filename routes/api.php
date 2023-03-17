@@ -22,7 +22,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::resource("termek", TermekController::class)->except("create", "edit");
 
-Route::post("register", [LoginController::class, 'createUser']);
-Route::get("login", [LoginController::class, 'login']);
+Route::post("register", 
+    [LoginController::class, 'createUser']);
+Route::post("login", 
+    [LoginController::class, 'login']);
+Route::middleware('auth:sanctum')->post("logout", 
+    [LoginController::class, 'logout']);
 
 Route::middleware('auth:sanctum')->get("vedettadatok", [LoginController::class, 'VedettAdatok']);

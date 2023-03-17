@@ -10,6 +10,10 @@ use App\Models\User;
 
 class LoginController extends Controller
 {
+    function logout(Request $request) {
+        $request->user()->currentAccessToken()->delete();
+    }
+    
     function login(Request $request) {
         
         $validated = $request->validate([
