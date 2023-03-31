@@ -31,7 +31,7 @@ class TermekController extends Controller
         $seged->leiras = $request->leiras;
         $seged->ar = $request->ar;
         $seged->kedvezmeny = $request->kedvezmeny;
-        $seged->kepurl = "";
+        $seged->kepUrl  = $request->kepUrl;
         $seged->save();
         return $seged;
     }
@@ -60,7 +60,7 @@ class TermekController extends Controller
         $termek->leiras = $request->leiras;
         $termek->ar = $request->ar;
         $termek->kedvezmeny = $request->kedvezmeny;
-        $termek->kepurl = "";
+        $termek->kepUrl = $request->kepUrl;
         $termek->save();
         return $termek;
     }

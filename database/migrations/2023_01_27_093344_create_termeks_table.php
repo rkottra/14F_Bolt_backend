@@ -16,7 +16,7 @@ class CreateTermeksTable extends Migration
         Schema::create('termekek', function (Blueprint $table) {
             $table->id();
             $table->string('nev', 100);
-            $table->string('kepUrl');
+            $table->string('kepUrl')->nullable();
             $table->string('leiras');
             $table->integer('ar');
             $table->double('kedvezmeny');
